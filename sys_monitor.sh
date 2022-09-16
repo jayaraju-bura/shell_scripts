@@ -2,7 +2,7 @@
 
 # This shell script monitors important system stats like memory, cpu and disk and prints them in tabulated format 
 
-
+# refer this "https://catonmat.net/awk-one-liners-explained-part-one" to understand awk 
 printf "Memory \t\tDisk \t\t    CPU \n"
 printf "Usage  \t\tUsage \t\t Utilization\n"
 
