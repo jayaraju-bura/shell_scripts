@@ -15,6 +15,7 @@ memory_used=$(free -m | awk 'NR==2{printf "%.2f%\t\t", $3*100/$2 }')
 disk_used=$(df -h | awk '$NF=="/"{printf "%s\t\t", $5}')
 cpu_used=$(top -bn1 | grep load | awk '{printf "   %.2f%%\t\t\n", $(NF-2)}')
 
+# top -bn1 <==>  b-> batch mode, n-> iteration limit
 # we can use 'uptime' as well to get load average as an alternative 
 #>> uptime
 # 17:48:51 up 21 days, 11:07,  6 users,  load average: 0.00, 0.00, 0.12
