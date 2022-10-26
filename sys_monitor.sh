@@ -16,6 +16,8 @@ disk_used=$(df -h | awk '$NF=="/"{printf "%s\t\t", $5}')
 cpu_used=$(top -bn1 | grep load | awk '{printf "   %.2f%%\t\t\n", $(NF-2)}')
 
 # top -bn1 <==>  b-> batch mode, n-> iteration limit
+# NF - Number of fields in current record
+# NR - Number of input records read till now, usually lines
 # we can use 'uptime' as well to get load average as an alternative 
 #>> uptime
 # 17:48:51 up 21 days, 11:07,  6 users,  load average: 0.00, 0.00, 0.12
